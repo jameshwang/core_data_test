@@ -24,6 +24,9 @@
 		1A998FE8177D5E780078B09F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A998FC7177D5E770078B09F /* CoreData.framework */; };
 		1A998FF0177D5E780078B09F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A998FEE177D5E780078B09F /* InfoPlist.strings */; };
 		1A998FF3177D5E780078B09F /* LocationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A998FF2177D5E780078B09F /* LocationsTests.m */; };
+		1A998FFE177D64550078B09F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A998FFD177D64550078B09F /* RootViewController.m */; };
+		1A999000177D65150078B09F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A998FFF177D65150078B09F /* CoreLocation.framework */; };
+		1A999003177D6D940078B09F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A999002177D6D940078B09F /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,11 @@
 		1A998FEF177D5E780078B09F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A998FF1177D5E780078B09F /* LocationsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationsTests.h; sourceTree = "<group>"; };
 		1A998FF2177D5E780078B09F /* LocationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationsTests.m; sourceTree = "<group>"; };
+		1A998FFC177D64550078B09F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1A998FFD177D64550078B09F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1A998FFF177D65150078B09F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1A999001177D6D940078B09F /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		1A999002177D6D940078B09F /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A999000177D65150078B09F /* CoreLocation.framework in Frameworks */,
 				1A998FC2177D5E770078B09F /* UIKit.framework in Frameworks */,
 				1A998FC4177D5E770078B09F /* Foundation.framework in Frameworks */,
 				1A998FC6177D5E770078B09F /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +117,7 @@
 		1A998FC0177D5E770078B09F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A998FFF177D65150078B09F /* CoreLocation.framework */,
 				1A998FC1177D5E770078B09F /* UIKit.framework */,
 				1A998FC3177D5E770078B09F /* Foundation.framework */,
 				1A998FC5177D5E770078B09F /* CoreGraphics.framework */,
@@ -120,9 +130,13 @@
 		1A998FC9177D5E770078B09F /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				1A998FFC177D64550078B09F /* RootViewController.h */,
+				1A998FFD177D64550078B09F /* RootViewController.m */,
 				1A998FD2177D5E770078B09F /* AppDelegate.h */,
 				1A998FD3177D5E770078B09F /* AppDelegate.m */,
 				1A998FDB177D5E780078B09F /* Locations.xcdatamodeld */,
+				1A999001177D6D940078B09F /* Event.h */,
+				1A999002177D6D940078B09F /* Event.m */,
 				1A998FCA177D5E770078B09F /* Supporting Files */,
 			);
 			path = Locations;
@@ -273,6 +287,8 @@
 				1A998FD0177D5E770078B09F /* main.m in Sources */,
 				1A998FD4177D5E770078B09F /* AppDelegate.m in Sources */,
 				1A998FDD177D5E780078B09F /* Locations.xcdatamodeld in Sources */,
+				1A998FFE177D64550078B09F /* RootViewController.m in Sources */,
+				1A999003177D6D940078B09F /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
