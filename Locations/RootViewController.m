@@ -28,7 +28,6 @@
     [super viewDidLoad];
 
     self.title = @"Locations";
-    _eventsArray = [[NSMutableArray alloc] init];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
@@ -41,6 +40,28 @@
     self.navigationItem.rightBarButtonItem = _addButton;
     
     [[self locationManager] startUpdatingLocation];
+    
+    // Set entity
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event"
+                                              inManagedObjectContext:_managedObjectContext];
+    [request setEntity:entity];
+    
+    // Set sorting
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"creationDate" ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [request setSortDescriptors:sortDescriptors];
+    
+    NSError *error;
+    NSMutableArray *mutableFetchResults = [[_managedObjectContext executeFetchRequest:request
+                                                                                error:&error] mutableCopy];
+    
+    if (!mutableFetchResults) {
+        //handle error
+    }
+    
+    _eventsArray = mutableFetchResults;
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
